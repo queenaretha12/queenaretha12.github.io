@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Queen Aretha - Carpe Diem</title>
+<title>Queen Aretha / Personal Archive</title>
 
 <style>
 
-/* ==============================
-   BASIC
-================================ */
+/* ==================================================
+   RESET
+================================================== */
 
 * {
     margin: 0;
@@ -19,145 +19,193 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    background: #e7e4dc;
+    color: #292a26;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fff3f5;
-    color: #4d3035;
+    line-height: 1.7;
 }
 
 
-/* ==============================
+/* ==================================================
+   COLOR SYSTEM
+
+   PAPER     #e7e4dc
+   OFF WHITE #f2f0e8
+   BLACK     #171816
+   OLIVE     #5d654f
+   BURGUNDY  #713f46
+================================================== */
+
+
+/* ==================================================
    HEADER
-================================ */
+================================================== */
 
 header {
-    width: 90%;
-    max-width: 1100px;
-    margin: 30px auto 0;
+    width: 92%;
+    max-width: 1180px;
 
-    padding: 45px 50px;
+    margin: 25px auto 0;
 
-    background:
-        linear-gradient(
-            135deg,
-            #e87591,
-            #f27d78,
-            #ff9b61
-        );
+    padding: 30px 45px 55px;
 
-    color: white;
+    background: #171816;
+    color: #e7e4dc;
 
-    border-radius: 25px 25px 0 0;
-
-    position: relative;
-    overflow: hidden;
-
-    box-shadow:
-        0 10px 25px rgba(180, 80, 90, 0.15);
+    border: 1px solid #171816;
 }
 
-header::before {
-    content: "♡  ✦  ♡  ✦";
+.header-meta {
+    display: flex;
 
-    position: absolute;
-    right: 40px;
-    top: 25px;
+    justify-content: space-between;
+    align-items: center;
 
-    font-size: 35px;
-    opacity: .3;
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid #4b4c46;
+
+    margin-bottom: 45px;
+}
+
+.header-meta span {
+    font-family: monospace;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #aaa9a0;
+}
+
+.header-meta .accent {
+    color: #a77a80;
 }
 
 .title {
-    font-size: 43px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(55px, 9vw, 110px);
+
+    font-weight: normal;
+
+    line-height: .84;
+
+    letter-spacing: -6px;
 }
 
 .subtitle {
-    font-size: 15px;
-    letter-spacing: 1px;
+    margin-top: 32px;
+
+    max-width: 650px;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    line-height: 1.8;
+
+    color: #aaa9a0;
 }
 
 
-/* ==============================
+/* ==================================================
    NAVIGATION
-================================ */
+================================================== */
 
 nav {
-    width: 90%;
-    max-width: 1100px;
+    width: 92%;
+    max-width: 1180px;
 
     margin: auto;
-    padding: 16px 25px;
-
-    background: #ffdce3;
-
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-
-    border-radius: 0 0 20px 20px;
-}
-
-nav button {
-    border: none;
-
-    background: #fff8f9;
-    color: #70454d;
-
-    padding: 11px 21px;
-
-    border-radius: 25px;
-
-    cursor: pointer;
-
-    font-size: 13px;
-
-    transition: .25s;
-}
-
-nav button:hover {
-    background: #f28773;
-    color: white;
-
-    transform: translateY(-3px);
-}
-
-
-/* ==============================
-   LAYOUT
-================================ */
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-
-    margin: 25px auto;
 
     display: grid;
 
-    grid-template-columns:
-        1fr 260px;
+    grid-template-columns: repeat(4, 1fr);
 
-    gap: 25px;
+    background: #e7e4dc;
+
+    border-left: 1px solid #aaa89f;
+    border-right: 1px solid #aaa89f;
+    border-bottom: 1px solid #aaa89f;
+}
+
+nav button {
+    padding: 16px 10px;
+
+    border: none;
+
+    border-right: 1px solid #aaa89f;
+
+    background: transparent;
+
+    color: #292a26;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+nav button:last-child {
+    border-right: none;
+}
+
+nav button:hover {
+    background: #713f46;
+
+    color: #f2f0e8;
 }
 
 
-/* ==============================
-   MAIN CONTENT
-================================ */
+/* ==================================================
+   MAIN LAYOUT
+================================================== */
+
+.container {
+    width: 92%;
+    max-width: 1180px;
+
+    margin: 28px auto;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 270px;
+
+    gap: 28px;
+}
+
+
+/* ==================================================
+   CONTENT
+================================================== */
 
 .content {
-    background: white;
+    min-height: 620px;
 
-    padding: 38px;
+    padding: 50px;
 
-    border-radius: 20px;
+    background: #f2f0e8;
 
-    min-height: 550px;
-
-    box-shadow:
-        0 7px 20px rgba(100,50,60,.08);
+    border: 1px solid #c1bfb6;
 }
 
 .page {
@@ -167,14 +215,14 @@ nav button:hover {
 .page.active {
     display: block;
 
-    animation: fade .35s ease;
+    animation: appear .3s ease;
 }
 
-@keyframes fade {
+@keyframes appear {
 
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(6px);
     }
 
     to {
@@ -184,411 +232,697 @@ nav button:hover {
 
 }
 
+
+/* ==================================================
+   TYPOGRAPHY
+================================================== */
+
 h2 {
-    color: #df687d;
+    font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 30px;
+    font-size: clamp(40px, 5vw, 62px);
 
-    margin-bottom: 5px;
-}
+    font-weight: normal;
 
-.date {
-    text-align: right;
+    letter-spacing: -3px;
 
-    font-size: 12px;
-
-    color: #b28b91;
-
-    margin-bottom: 28px;
-}
-
-p {
-    font-size: 14px;
-
-    line-height: 1.9;
-
-    margin-bottom: 17px;
-}
-
-
-/* ==============================
-   BERANDA
-================================ */
-
-.welcome {
-    padding: 25px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #fff0f3,
-            #fff6ed
-        );
-
-    border-radius: 18px;
-
-    border-left:
-        5px solid #f28a72;
-
-    margin-bottom: 30px;
-}
-
-.welcome h3 {
-    color: #dc6874;
-
-    margin-bottom: 10px;
-}
-
-.section-title {
-    color: #df687d;
-
-    font-size: 20px;
-
-    margin-bottom: 17px;
-}
-
-
-/* FILM */
-
-.film-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap: 16px;
-}
-
-.film-card {
-    padding: 20px;
-
-    background: #fff1f3;
-
-    border-radius: 17px;
-
-    border-left:
-        5px solid #f18b73;
-
-    transition: .25s;
-}
-
-.film-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 8px 18px
-        rgba(100,50,60,.12);
-}
-
-.film-card h3 {
-    color: #d86170;
-
-    margin-bottom: 7px;
-}
-
-.genre {
-    font-size: 11px;
-
-    color: #ae7f87;
-
-    margin-bottom: 10px;
-}
-
-.film-card p {
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-.letterboxd {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 11px 19px;
-
-    background: #f28773;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 20px;
-
-    font-size: 12px;
-}
-
-
-/* ==============================
-   TENTANG SAYA
-================================ */
-
-.about-intro {
-    background:
-        linear-gradient(
-            135deg,
-            #fff0f4,
-            #fff6ee
-        );
-
-    padding: 25px;
-
-    border-radius: 18px;
-
-    margin-top: 20px;
-}
-
-.about-intro h3 {
-    color: #dd6b78;
-
-    margin-bottom: 15px;
-}
-
-.info {
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 15px;
-
-    line-height: 2;
-
-    font-size: 14px;
-}
-
-.info strong {
-    color: #df6878;
-}
-
-.quote {
-    margin-top: 20px;
-
-    padding: 20px;
-
-    background: #fff8f5;
-
-    border-left:
-        4px solid #f28a72;
-
-    font-style: italic;
-
-    color: #79545b;
-}
-
-
-/* ==============================
-   SEKOLAH
-================================ */
-
-.article {
-    margin-top: 20px;
-}
-
-.article h3 {
-    color: #dc6877;
-
-    font-size: 22px;
-
-    margin-top: 25px;
+    line-height: .95;
 
     margin-bottom: 12px;
 }
 
+.date {
+    padding-bottom: 25px;
+
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid #c5c3b9;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #777870;
+}
+
+p {
+    margin-bottom: 17px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+b {
+    font-weight: 600;
+}
+
+
+/* ==================================================
+   HOME
+================================================== */
+
+.introduction {
+    padding: 25px 0 15px;
+
+    border-top: 4px solid #5d654f;
+
+    margin-bottom: 48px;
+}
+
+.introduction h3 {
+    margin-bottom: 18px;
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    font-weight: normal;
+}
+
+.introduction p {
+    max-width: 720px;
+}
+
+
+/* ==================================================
+   SECTION LABEL
+================================================== */
+
+.section-label {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #65675f;
+}
+
+.section-label span:last-child {
+    color: #713f46;
+}
+
+
+/* ==================================================
+   FILMS
+================================================== */
+
+.film-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1px;
+
+    background: #bcbab0;
+
+    border: 1px solid #bcbab0;
+}
+
+.film-card {
+    min-height: 230px;
+
+    padding: 25px;
+
+    background: #f2f0e8;
+
+    transition: .2s;
+}
+
+.film-card:hover {
+    background: #e6e3da;
+}
+
+.film-number {
+    margin-bottom: 38px;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    color: #888980;
+}
+
+.film-card h3 {
+    margin-bottom: 7px;
+
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+.genre {
+    margin-bottom: 16px;
+
+    font-family: monospace;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+    color: #73756d;
+}
+
+.film-card p {
+    margin-bottom: 0;
+
+    color: #595b54;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   EXTERNAL LINKS
+================================================== */
+
+.external-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 25px;
+}
+
+.external-link {
+    display: inline-block;
+
+    padding: 10px 15px;
+
+    border: 1px solid #292a26;
+
+    color: #292a26;
+
+    text-decoration: none;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: .2s;
+}
+
+.external-link:hover {
+    background: #292a26;
+
+    color: #f2f0e8;
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+
+    margin-top: 15px;
+}
+
+.about-left {
+    border-top: 1px solid #9f9e95;
+
+    padding-top: 20px;
+}
+
+.about-left h3 {
+    margin-bottom: 22px;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    font-weight: normal;
+}
+
+.info {
+    padding: 24px;
+
+    background: #e8e5dc;
+
+    border: 1px solid #c4c2b8;
+
+    font-size: 12px;
+
+    line-height: 2.1;
+}
+
+.info strong {
+    font-family: monospace;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    color: #5d654f;
+}
+
+.quote {
+    margin-top: 28px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #aaa89f;
+    border-bottom: 1px solid #aaa89f;
+
+    color: #713f46;
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    font-style: italic;
+}
+
+
+/* ==================================================
+   SCHOOL
+================================================== */
+
 .article-box {
-    padding: 23px;
+    margin-top: 10px;
+}
 
-    background:
-        linear-gradient(
-            135deg,
-            #fff1f4,
-            #fff6eb
-        );
+.article-box h3 {
+    margin-top: 38px;
 
-    border-radius: 18px;
+    margin-bottom: 12px;
 
-    margin-top: 20px;
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: normal;
+}
+
+.article-box h3:first-child {
+    margin-top: 0;
+}
+
+.article-box p {
+    max-width: 780px;
 }
 
 .school-list {
-    padding-left: 22px;
+    padding-left: 20px;
 
-    line-height: 2;
+    margin: 20px 0 25px;
 
-    font-size: 14px;
+    font-size: 12px;
+
+    line-height: 2.2;
 }
 
 .school-list li::marker {
-    color: #f18470;
+    color: #713f46;
 }
 
 
-/* ==============================
-   SYAIR LAGU
-================================ */
+/* ==================================================
+   SONG
+================================================== */
 
 .song-box {
     margin-top: 20px;
 
-    padding: 28px;
+    padding: 35px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #fff0f3,
-            #fff5eb
-        );
+    background: #e8e5dc;
 
-    border-radius: 18px;
+    border: 1px solid #bdbbb1;
+}
 
-    border-top:
-        5px solid #f28b70;
+.song-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid #b8b6ac;
 }
 
 .song-title {
-    font-size: 27px;
+    color: #713f46;
 
-    font-weight: bold;
+    font-family: Georgia, serif;
 
-    color: #d96275;
+    font-size: 43px;
+
+    font-weight: normal;
+
+    line-height: 1;
 }
 
 .artist {
-    font-size: 13px;
+    margin-top: 8px;
 
-    color: #aa8087;
+    color: #74766e;
 
-    margin-top: 5px;
+    font-family: monospace;
 
-    margin-bottom: 20px;
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
 }
 
-.song-info {
-    background: white;
+.listen-button {
+    display: inline-block;
 
-    padding: 20px;
+    white-space: nowrap;
 
-    border-radius: 14px;
+    padding: 10px 14px;
+
+    border: 1px solid #292a26;
+
+    color: #292a26;
+
+    text-decoration: none;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: .2s;
+}
+
+.listen-button:hover {
+    background: #713f46;
+
+    border-color: #713f46;
+
+    color: #f2f0e8;
+}
+
+.song-description {
+    padding-left: 18px;
+
+    border-left: 3px solid #5d654f;
+
+    margin-bottom: 28px;
+}
+
+.song-description p {
+    margin-bottom: 0;
+
+    color: #5b5d55;
+
+    font-size: 12px;
 }
 
 .lyrics {
-    margin-top: 20px;
+    padding: 28px;
 
-    padding: 20px;
+    background: #f2f0e8;
 
-    background: #fffafa;
+    border: 1px solid #c5c3b9;
+}
 
-    border-radius: 14px;
+.lyrics-label {
+    margin-bottom: 22px;
 
-    font-style: italic;
+    font-family: monospace;
 
-    line-height: 2;
+    font-size: 8px;
 
-    color: #68474d;
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #713f46;
+}
+
+.lyrics p {
+    margin-bottom: 18px;
+
+    color: #30312d;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+.lyrics p:last-child {
+    margin-bottom: 0;
 }
 
 
-/* ==============================
+/* ==================================================
    SIDEBAR
-================================ */
+================================================== */
 
 aside {
-    background: #fffafa;
-
-    padding: 25px;
-
-    border-radius: 20px;
-
     height: fit-content;
 
-    box-shadow:
-        0 7px 20px
-        rgba(100,50,60,.07);
+    padding: 30px;
+
+    background: #171816;
+
+    color: #e7e4dc;
+
+    position: sticky;
+
+    top: 20px;
 }
 
 aside h3 {
-    color: #dc6877;
+    padding-bottom: 20px;
 
-    margin-bottom: 18px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid #44453f;
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: normal;
+}
+
+.side-section {
+    margin-bottom: 35px;
+}
+
+.side-label {
+    margin-bottom: 12px;
+
+    color: #92938b;
+
+    font-family: monospace;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
 }
 
 aside a {
     display: block;
 
+    padding: 9px 0;
+
+    border-bottom: 1px solid #30312d;
+
+    color: #d4d2ca;
+
     text-decoration: none;
 
-    color: #805c63;
+    font-size: 11px;
 
-    font-size: 13px;
-
-    margin: 15px 0;
+    transition: .2s;
 }
 
 aside a:hover {
-    color: #ed806c;
+    padding-left: 7px;
+
+    color: #a77a80;
 }
 
 .side-note {
-    margin-top: 25px;
+    padding-top: 25px;
 
-    padding-top: 20px;
+    border-top: 1px solid #44453f;
 
-    border-top:
-        1px solid #f1d8d8;
+    color: #85867e;
 
-    color: #a27d83;
+    font-family: monospace;
 
-    font-size: 12px;
+    font-size: 9px;
 
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 
-/* ==============================
+/* ==================================================
    FOOTER
-================================ */
+================================================== */
 
 footer {
-    width: 90%;
-    max-width: 1100px;
+    width: 92%;
+    max-width: 1180px;
 
     margin: 25px auto 35px;
 
-    text-align: right;
+    padding-top: 18px;
 
-    color: #ad888e;
+    border-top: 1px solid #aaa89f;
 
-    font-size: 12px;
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #777870;
+
+    font-family: monospace;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
 }
 
 
-/* ==============================
+/* ==================================================
    MOBILE
-================================ */
+================================================== */
 
-@media(max-width:750px) {
+@media(max-width: 800px) {
 
     header {
-        padding: 30px 25px;
+        padding: 28px 25px 40px;
+    }
+
+    .header-meta {
+        margin-bottom: 35px;
     }
 
     .title {
-        font-size: 32px;
+        font-size: 58px;
+
+        letter-spacing: -4px;
+    }
+
+    nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav button:nth-child(2) {
+        border-right: none;
+    }
+
+    nav button:nth-child(1),
+    nav button:nth-child(2) {
+        border-bottom: 1px solid #aaa89f;
     }
 
     .container {
         grid-template-columns: 1fr;
     }
 
+    .content {
+        padding: 30px 25px;
+    }
+
+    aside {
+        position: static;
+    }
+
     .film-grid {
         grid-template-columns: 1fr;
     }
 
-    .content {
-        padding: 25px;
+    .about-layout {
+        grid-template-columns: 1fr;
     }
 
-    nav {
-        justify-content: center;
+    .song-header {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media(max-width: 480px) {
+
+    .title {
+        font-size: 48px;
+    }
+
+    .header-number {
+        display: none;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    .song-box {
+        padding: 23px;
+    }
+
+    .song-title {
+        font-size: 35px;
     }
 
 }
@@ -601,58 +935,76 @@ footer {
 <body>
 
 
-<!-- ==============================
+<!-- ==================================================
      HEADER
-================================ -->
+================================================== -->
 
 <header>
 
-    <div class="title">
-        Queen Aretha
+    <div class="header-meta">
+
+        <span>
+            Personal Archive / 2026
+        </span>
+
+        <span class="accent">
+            Queen Aretha / 01—04
+        </span>
+
     </div>
 
+
+    <div class="title">
+        Queen<br>
+        Aretha
+    </div>
+
+
     <div class="subtitle">
-        "carpe diem" · my little personal website ♡
+        visual communication student / cinema / music / visual things
     </div>
 
 </header>
 
 
-<!-- ==============================
-     MENU
-================================ -->
+<!-- ==================================================
+     NAVIGATION
+================================================== -->
 
 <nav>
 
     <button onclick="showPage('home')">
-        Beranda
+        01 / Beranda
     </button>
 
     <button onclick="showPage('about')">
-        Tentang Saya
+        02 / Tentang Saya
     </button>
 
     <button onclick="showPage('school')">
-        Sekolahku
+        03 / Sekolahku
     </button>
 
     <button onclick="showPage('song')">
-        Syair Lagu
+        04 / Lagu
     </button>
 
 </nav>
 
 
-
 <div class="container">
 
+
+<!-- ==================================================
+     MAIN
+================================================== -->
 
 <main class="content">
 
 
-<!-- ==========================
-     BERANDA
-=========================== -->
+<!-- ==================================================
+     HOME
+================================================== -->
 
 <section id="home" class="page active">
 
@@ -661,35 +1013,42 @@ footer {
     </h2>
 
     <div class="date">
-        Personal Website · 2026
+        Personal archive / selected interests
     </div>
 
 
-    <div class="welcome">
+    <div class="introduction">
 
         <h3>
-            Welcome to my little corner! ♡
+            A small collection of things I like.
         </h3>
 
         <p>
-            Halo! Selamat datang di website pribadi saya.
-            Website ini dibuat untuk memperkenalkan sedikit
-            tentang diri saya, sekolah saya, dan beberapa
-            hal yang saya sukai.
+            Saya Queen, pelajar DKV yang tertarik
+            pada film, musik, desain, dan hal-hal
+            visual yang punya karakter.
         </p>
 
         <p>
-            Saya memiliki ketertarikan terhadap film.
-            Karena itu, saya membuat halaman ini dengan
-            sedikit konsep seperti halaman personal
-            Letterboxd.
+            Website ini adalah ruang kecil untuk
+            menyimpan beberapa hal tentang saya,
+            mulai dari film yang saya suka sampai
+            musik yang sedang saya dengarkan.
         </p>
 
     </div>
 
 
-    <div class="section-title">
-        🎬 My Film Picks
+    <div class="section-label">
+
+        <span>
+            Film / Selected
+        </span>
+
+        <span>
+            04 entries
+        </span>
+
     </div>
 
 
@@ -698,56 +1057,68 @@ footer {
 
         <div class="film-card">
 
+            <div class="film-number">
+                001
+            </div>
+
             <h3>
                 Lady Bird
             </h3>
 
             <div class="genre">
-                Comedy · Drama · Coming-of-age
+                Comedy / Drama / Coming-of-age
             </div>
 
             <p>
-                Film tentang masa remaja, keluarga,
-                sekolah, persahabatan, dan proses
-                menemukan jati diri.
+                Masa remaja, keluarga, sekolah,
+                dan hubungan yang terasa terlalu
+                dekat untuk disebut sederhana.
             </p>
 
         </div>
 
 
         <div class="film-card">
+
+            <div class="film-number">
+                002
+            </div>
 
             <h3>
                 Knives Out
             </h3>
 
             <div class="genre">
-                Mystery · Comedy · Crime
+                Mystery / Comedy / Crime
             </div>
 
             <p>
-                Misteri pembunuhan dengan keluarga
-                yang penuh rahasia. Setiap karakter
-                memiliki sesuatu yang disembunyikan.
+                Sebuah keluarga, sebuah kematian,
+                dan terlalu banyak orang yang punya
+                alasan untuk berbohong.
             </p>
 
         </div>
 
 
         <div class="film-card">
+
+            <div class="film-number">
+                003
+            </div>
 
             <h3>
                 Bones and All
             </h3>
 
             <div class="genre">
-                Romance · Horror · Drama
+                Romance / Horror / Drama
             </div>
 
             <p>
-                Film dengan kisah cinta yang unik,
-                gelap, dan emosional. Ceritanya
-                tidak biasa dan cukup memorable.
+                Dua orang yang sama-sama mencari
+                tempat untuk merasa sedikit lebih
+                manusia.
             </p>
 
         </div>
@@ -755,19 +1126,22 @@ footer {
 
         <div class="film-card">
 
+            <div class="film-number">
+                004
+            </div>
+
             <h3>
                 I Origins
             </h3>
 
             <div class="genre">
-                Sci-Fi · Drama · Romance
+                Sci-Fi / Drama / Romance
             </div>
 
             <p>
-                Film yang menggabungkan sains,
-                cinta, kehidupan, dan pertanyaan
-                tentang apa yang sebenarnya kita
-                percayai.
+                Sains, kehilangan, cinta, dan
+                pertanyaan tentang hal-hal yang
+                mungkin tidak bisa dijelaskan data.
             </p>
 
         </div>
@@ -776,22 +1150,33 @@ footer {
     </div>
 
 
-    <a
-        class="letterboxd"
-        href="https://letterboxd.com/"
-        target="_blank"
-    >
-        Visit Letterboxd ↗
-    </a>
+    <div class="external-links">
 
+        <a
+            class="external-link"
+            href="https://boxd.it/bhBxb"
+            target="_blank"
+        >
+            Letterboxd ↗
+        </a>
+
+
+        <a
+            class="external-link"
+            href="https://open.spotify.com/user/v3cexwxi76we1utq9wslgm1gx?si=zdYPGo-MQuinsd5TszfuBA&utm_source=copy-link"
+            target="_blank"
+        >
+            Spotify ↗
+        </a>
+
+    </div>
 
 </section>
 
 
-
-<!-- ==========================
-     TENTANG SAYA
-=========================== -->
+<!-- ==================================================
+     ABOUT
+================================================== -->
 
 <section id="about" class="page">
 
@@ -800,80 +1185,98 @@ footer {
     </h2>
 
     <div class="date">
-        A little introduction ♡
+        Notes on the person behind the screen
     </div>
 
 
-    <p>
-        Halo! Nama saya <b>Queen Aretha</b>.
-        Senang bertemu dengan kalian!
-    </p>
+    <div class="about-layout">
 
 
-    <p>
-        Saya adalah seorang pelajar yang sedang
-        menempuh pendidikan di jurusan Desain
-        Komunikasi Visual atau DKV.
-    </p>
+        <div>
+
+            <div class="about-left">
+
+                <h3>
+                    Queen Aretha
+                </h3>
+
+                <p>
+                    Saya adalah pelajar jurusan
+                    Desain Komunikasi Visual yang
+                    tertarik pada film, musik,
+                    desain, dan berbagai bentuk visual.
+                </p>
+
+                <p>
+                    Saya suka melihat bagaimana sebuah
+                    ide sederhana dapat diterjemahkan
+                    menjadi sesuatu yang memiliki karakter.
+                </p>
+
+            </div>
 
 
-    <p>
-        Saya membuat website ini sebagai salah satu
-        tugas sekolah. Melalui website sederhana ini,
-        saya ingin memperkenalkan diri saya dan
-        membagikan beberapa hal yang saya sukai.
-    </p>
-
-
-    <div class="about-intro">
-
-        <h3>
-            About Me
-        </h3>
-
-
-        <div class="info">
-
-            <strong>Nama:</strong>
-            Queen Aretha
-            <br>
-
-            <strong>Jurusan:</strong>
-            Desain Komunikasi Visual
-            <br>
-
-            <strong>Hobi:</strong>
-            Menonton film, mendengarkan musik,
-            dan membuat desain
-            <br>
-
-            <strong>Minat:</strong>
-            Film, musik, desain, dan hal kreatif
-            <br>
-
-            <strong>Motto:</strong>
-            Carpe diem
+            <div class="quote">
+                "Carpe diem."
+            </div>
 
         </div>
 
 
-        <div class="quote">
+        <div>
 
-            "Carpe diem" berarti
-            "seize the day", yaitu memanfaatkan
-            dan menikmati waktu yang sedang kita jalani.
+            <div class="info">
+
+                <strong>Nama</strong><br>
+                Queen Aretha
+
+                <br><br>
+
+                <strong>Jurusan</strong><br>
+                Desain Komunikasi Visual
+
+                <br><br>
+
+                <strong>Hobi</strong><br>
+                Menonton film, mendengarkan musik,
+                membuat desain
+
+                <br><br>
+
+                <strong>Minat</strong><br>
+                Film, musik, desain, visual culture
+
+                <br><br>
+
+                <strong>Motto</strong><br>
+                Carpe diem
+
+            </div>
+
+
+            <div class="external-links">
+
+                <a
+                    class="external-link"
+                    href="https://www.instagram.com/quuiinaa?stkn=dXE5c3p1bHBwaTdm"
+                    target="_blank"
+                >
+                    Instagram ↗
+                </a>
+
+            </div>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-
-<!-- ==========================
-     SEKOLAHKU
-=========================== -->
+<!-- ==================================================
+     SCHOOL
+================================================== -->
 
 <section id="school" class="page">
 
@@ -882,7 +1285,7 @@ footer {
     </h2>
 
     <div class="date">
-        SMKN 1 Tangerang · DKV
+        SMKN 1 Tangerang / DKV
     </div>
 
 
@@ -892,91 +1295,84 @@ footer {
             SMK Negeri 1 Tangerang
         </h3>
 
-
         <p>
-            Saya bersekolah di <b>SMKN 1 Tangerang</b>.
-            Sekolah ini menjadi tempat saya belajar,
-            bertemu teman-teman, mengembangkan kemampuan,
-            dan tentunya mengerjakan tugas yang kadang
-            datangnya seperti tidak mengenal belas kasihan.
+            Saya bersekolah di SMKN 1 Tangerang
+            dan mengambil jurusan Desain Komunikasi
+            Visual atau DKV.
         </p>
 
-
         <p>
-            Saya mengambil jurusan
-            <b>Desain Komunikasi Visual (DKV)</b>.
-            DKV merupakan jurusan yang berhubungan dengan
-            komunikasi melalui media visual.
+            DKV bukan hanya tentang membuat sesuatu
+            terlihat bagus. Di dalamnya terdapat proses
+            menyampaikan ide, informasi, dan pesan
+            melalui visual.
         </p>
 
 
         <h3>
-            Tentang Jurusan DKV
+            Tentang DKV
         </h3>
 
-
         <p>
-            Di jurusan DKV, siswa tidak hanya belajar
-            membuat sesuatu agar terlihat bagus, tetapi
-            juga belajar bagaimana sebuah visual dapat
-            menyampaikan pesan dan informasi kepada orang
-            lain.
+            Dalam proses pembelajaran, saya mempelajari
+            berbagai hal yang berkaitan dengan desain
+            dan komunikasi visual.
         </p>
 
-
         <p>
-            Dalam proses pembelajaran, kami dapat membuat
-            berbagai macam karya seperti poster, ilustrasi,
-            desain digital, fotografi, dan berbagai media
-            visual lainnya.
+            Beberapa di antaranya adalah desain grafis,
+            ilustrasi, fotografi, tipografi, media digital,
+            dan berbagai project visual.
         </p>
 
 
         <h3>
-            Hal Menarik di DKV
+            Hal yang dipelajari
         </h3>
 
 
         <ul class="school-list">
 
             <li>
-                Belajar desain grafis
+                Desain grafis
             </li>
 
             <li>
-                Membuat poster dan media promosi
+                Poster dan media promosi
             </li>
 
             <li>
-                Belajar menggunakan software desain
+                Tipografi
             </li>
 
             <li>
-                Belajar fotografi dan visual composition
+                Fotografi
             </li>
 
             <li>
-                Membuat berbagai project kreatif
+                Komposisi visual
             </li>
 
             <li>
-                Mengembangkan ide menjadi karya visual
+                Software desain
+            </li>
+
+            <li>
+                Pengembangan konsep visual
             </li>
 
         </ul>
 
 
         <h3>
-            Kenapa Saya Memilih DKV?
+            Kenapa DKV?
         </h3>
 
-
         <p>
-            Saya memilih DKV karena saya tertarik dengan
-            dunia visual dan desain. Menurut saya, menarik
-            ketika sebuah ide yang awalnya hanya ada di
-            kepala dapat diubah menjadi sesuatu yang bisa
-            dilihat oleh orang lain.
+            Saya memilih DKV karena saya tertarik
+            dengan bagaimana sebuah ide dapat
+            diterjemahkan menjadi bentuk visual
+            yang bisa dilihat dan dipahami orang lain.
         </p>
 
     </div>
@@ -984,45 +1380,57 @@ footer {
 </section>
 
 
-
-<!-- ==========================
-     SYAIR LAGU
-=========================== -->
+<!-- ==================================================
+     SONG
+================================================== -->
 
 <section id="song" class="page">
 
     <h2>
-        Syair Lagu
+        Lagu
     </h2>
 
     <div class="date">
-        A song I like ♫
+        One song / one moment / repeat
     </div>
 
 
     <div class="song-box">
 
-        <div class="song-title">
-            Landslide
+
+        <div class="song-header">
+
+            <div>
+
+                <div class="song-title">
+                    Landslide
+                </div>
+
+                <div class="artist">
+                    Oh Wonder
+                </div>
+
+            </div>
+
+
+            <a
+                class="listen-button"
+                href="https://youtu.be/MuZfJwghp1Y?si=Y8PIF8yhQ2nqAekR"
+                target="_blank"
+            >
+                Listen on YouTube ↗
+            </a>
+
         </div>
 
-        <div class="artist">
-            Oh Wonder
-        </div>
 
-
-        <div class="song-info">
+        <div class="song-description">
 
             <p>
-                <b>Landslide</b> merupakan lagu dari
-                Oh Wonder yang memiliki nuansa lembut
-                dan emosional.
-            </p>
-
-            <p>
-                Lagu ini terasa seperti menggambarkan
-                seseorang yang sedang melewati masa sulit
-                dan mencoba untuk tetap melanjutkan hidup.
+                Lagu yang saya simpan karena
+                suasananya terasa tenang, sedikit
+                melankolis, dan tidak terlalu banyak
+                menjelaskan dirinya sendiri.
             </p>
 
         </div>
@@ -1030,25 +1438,40 @@ footer {
 
         <div class="lyrics">
 
+            <div class="lyrics-label">
+                Selected lyrics
+            </div>
+
             <p>
-                “I know it hurts sometimes,
-                but you'll get over it”
+                Finishing eight or nine<br>
+                Tell me, what's the perfect time
             </p>
 
             <p>
-                “You'll find another life to live”
+                I told you I'll been waiting<br>
+                Hiding from the rainfall
             </p>
 
             <p>
-                “I swear that you'll get over it”
-            </p>
-
-            <p>
-              “I know you're sad and tired,
-                you've got nothing left to give”
+                Tell me what's the joy of giving<br>
+                if you're never pleased.
             </p>
 
         </div>
+
+
+        <div class="external-links">
+
+            <a
+                class="external-link"
+                href="https://youtu.be/MuZfJwghp1Y?si=Y8PIF8yhQ2nqAekR"
+                target="_blank"
+            >
+                Play on YouTube ↗
+            </a>
+
+        </div>
+
 
     </div>
 
@@ -1058,41 +1481,99 @@ footer {
 </main>
 
 
-<!-- ==========================
+<!-- ==================================================
      SIDEBAR
-=========================== -->
+================================================== -->
 
 <aside>
 
     <h3>
-        Quick Links
+        Index
     </h3>
 
-    <a href="#" onclick="showPage('home'); return false;">
-        🏠 Beranda
-    </a>
 
-    <a href="#" onclick="showPage('about'); return false;">
-        ♡ Tentang Saya
-    </a>
+    <div class="side-section">
 
-    <a href="#" onclick="showPage('school'); return false;">
-        🎨 Sekolahku
-    </a>
+        <div class="side-label">
+            Pages
+        </div>
 
-    <a href="#" onclick="showPage('song'); return false;">
-        ♫ Syair Lagu
-    </a>
+
+        <a
+            href="#"
+            onclick="showPage('home'); return false;"
+        >
+            01 / Beranda
+        </a>
+
+
+        <a
+            href="#"
+            onclick="showPage('about'); return false;"
+        >
+            02 / Tentang Saya
+        </a>
+
+
+        <a
+            href="#"
+            onclick="showPage('school'); return false;"
+        >
+            03 / Sekolahku
+        </a>
+
+
+        <a
+            href="#"
+            onclick="showPage('song'); return false;"
+        >
+            04 / Lagu
+        </a>
+
+    </div>
+
+
+    <div class="side-section">
+
+        <div class="side-label">
+            Elsewhere
+        </div>
+
+
+        <a
+            href="https://www.instagram.com/quuiinaa?stkn=dXE5c3p1bHBwaTdm"
+            target="_blank"
+        >
+            Instagram ↗
+        </a>
+
+
+        <a
+            href="https://open.spotify.com/user/v3cexwxi76we1utq9wslgm1gx?si=zdYPGo-MQuinsd5TszfuBA&utm_source=copy-link"
+            target="_blank"
+        >
+            Spotify ↗
+        </a>
+
+
+        <a
+            href="https://boxd.it/bhBxb"
+            target="_blank"
+        >
+            Letterboxd ↗
+        </a>
+
+    </div>
+
 
     <div class="side-note">
 
-        Website ini dibuat sebagai tugas
-        sekolah dan menjadi sedikit ruang
-        untuk memperkenalkan diri saya.
+        PERSONAL WEBSITE<br>
+        QUEEN ARETHA / 2026<br><br>
 
-        <br><br>
-
-        Made with ♡ by Queen Aretha.
+        A small digital archive
+        of films, music,
+        design and notes.
 
     </div>
 
@@ -1102,29 +1583,35 @@ footer {
 </div>
 
 
-<!-- ==========================
+<!-- ==================================================
      FOOTER
-=========================== -->
+================================================== -->
 
 <footer>
 
-    © 2026 Queen Aretha · Carpe Diem
+    <span>
+        Queen Aretha / 2026
+    </span>
+
+    <span>
+        Personal Archive
+    </span>
 
 </footer>
 
 
-<!-- ==========================
+<!-- ==================================================
      JAVASCRIPT
-=========================== -->
+================================================== -->
 
 <script>
 
 function showPage(pageId) {
 
-    // Ambil semua halaman
-    const pages = document.querySelectorAll(".page");
+    const pages =
+        document.querySelectorAll(".page");
 
-    // Sembunyikan semua halaman
+
     pages.forEach(function(page) {
 
         page.classList.remove("active");
@@ -1132,9 +1619,9 @@ function showPage(pageId) {
     });
 
 
-    // Tampilkan halaman yang dipilih
     const selectedPage =
         document.getElementById(pageId);
+
 
     if (selectedPage) {
 
@@ -1143,7 +1630,6 @@ function showPage(pageId) {
     }
 
 
-    // Scroll kembali ke bagian atas
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -1155,5 +1641,4 @@ function showPage(pageId) {
 
 
 </body>
-
 </html>
